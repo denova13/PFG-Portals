@@ -9,12 +9,12 @@ public class DañoLava : MonoBehaviour
     public float dañoLava = 10.0f;
     public bool reposoDaño = false;
     public float tiempoReposo = 1f;
-    
+    [SerializeField] private AudioSource sonidoLava;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        sonidoLava.Play();
     }
 
     // Update is called once per frame

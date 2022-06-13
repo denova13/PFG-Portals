@@ -30,7 +30,7 @@ public class FPController : MonoBehaviour
             if (angulo > 180){
                 angulo -= 360;
             }
-            angulo = Mathf.Clamp(angulo, -80, 60);
+            angulo = Mathf.Clamp(angulo, -80, 80);
 
             camara.localEulerAngles = Vector3.right * angulo;
         }

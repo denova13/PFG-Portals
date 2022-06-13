@@ -7,7 +7,7 @@ public class Portales : MonoBehaviour
 {
     //public bool movingRing;
     public Portales otherPortal;
-    public float fuerzaSalida=1f;
+    //public float fuerzaSalida=1f;
     
     public Transform bottom;
     //public GameObject teleportingParticles;
@@ -57,17 +57,10 @@ public class Portales : MonoBehaviour
     }
     public void TeleportOut(GameObject g, Rigidbody r,float velocidadEntrada)
     {
-        /*if (movingRing)
-        {
-            posicionSalida = transform.position; //if ring is moving
-            direccion = Vector3.Normalize(transform.position - bottom.position);
-        }*/
         tpEnProceso = true;
-        r.velocity = direccion * velocidadEntrada * fuerzaSalida;
+        r.velocity = direccion * velocidadEntrada /* fuerzaSalida*/;
         g.SetActive(true);
         g.transform.position = posicionSalida;
-        /*teleportingParticles.transform.position = g.transform.position;
-        teleportingParticles.SetActive(true);*/
     }
 
     public void TelefortFinished()
